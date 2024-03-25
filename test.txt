@@ -1,0 +1,16 @@
+1. 'this' refer to an object. there is variety of use for 'this' depend on context.
+in Bind(), call(), apply(), 'this' let the function access object value set into the function.
+Bind(): to bind a value into a function. return the copy of the function. 
+call(): set 'this' inside a function then immediately call the function. only return value. accept comma separated value as parameter.
+apply(): similar to call(), set 'this' inside function then immediately call the function. but accept array as parameter.
+
+2. memoization is an action to avoid repetitive function calling that process same value each time there is re-render by caching processed value.
+memoization help to improve to reduce calculation process normally needed each time function called, especially good process that require expensive calculation.
+
+3. asyncronous: to execute a process parallel with another process without needing to wait for each other to finish first.
+sycnronous: executing process once at a time. If there is already running process, another process need to wait until running process is finished.
+
+4.a function with capability to pause and resume it's execution allowing generator function suit for iteration of value
+
+5. async/await : a function using async will return a promise, and using 'await' within an async function will halt the function execution until promise is resolved.
+promise: a placeholder that represent a value that is still on operation and eventually return a value, whether is is failed or success.
