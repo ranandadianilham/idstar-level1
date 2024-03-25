@@ -9,7 +9,9 @@ function updateUnfinishedCount() {
 
 function areAllCheckboxesChecked() {
   const checkboxInputs = taskList.querySelectorAll("input[type=checkbox]");
+
   const checkboxInputsArray = Array.from(checkboxInputs);
+
   return checkboxInputsArray.every((checkbox) => checkbox.checked);
 }
 
