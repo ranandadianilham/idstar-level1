@@ -71,6 +71,10 @@ function addTask() {
       }
     });
     updateUnfinishedCount();
+    const allChecked = areAllCheckboxesChecked();
+    if (allChecked && checkboxInputs.length > 0) {
+      alert("All tasks are completed!");
+    }
   };
 
   newListItem.prepend(completeCheck);
