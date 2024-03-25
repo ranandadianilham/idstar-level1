@@ -7,6 +7,12 @@ function updateUnfinishedCount() {
   unfinishedCount.innerText = unfinishedItems.length;
 }
 
+function areAllCheckboxesChecked() {
+  const checkboxInputs = taskList.querySelectorAll("input[type=checkbox]");
+  const checkboxInputsArray = Array.from(checkboxInputs);
+  return checkboxInputsArray.every((checkbox) => checkbox.checked);
+}
+
 function addTask() {
   const newTaskValue = newTaskInput.value.trim();
 
@@ -23,6 +29,11 @@ function addTask() {
   completeCheck.addEventListener("change", function () {
     newListItem.classList.toggle("strikethrough", this.checked);
     updateUnfinishedCount();
+
+    const allChecked = areAllCheckboxesChecked();
+    if (allChecked) {
+      alert("All tasks are completed!");
+    }
   });
 
   const completeButton = document.createElement("button");
